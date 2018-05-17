@@ -82,9 +82,32 @@ end
 p Random.reflect == Random #=> true
 
 ```
-
 ---
 
 # Module 
+
++++
+##### As you start to write bigger and bigger Ruby programs, you'll naturally find yourself producing chunks of reusable code—libraries of related routines that are generally applicable
++++
+##### In Ruby, modules are somewhat similar to classes: they are things that hold methods, just like classes do
++++
+##### With modules you can share methods between classes
++++
+### Example 
+```ruby
+module Cream
+  def cream?
+    true
+  end
+end
+
+class Cookie
+  include Cream
+end
+
+cookie = Cookie.new
+p cookie.cream?
+```
+
 
 
