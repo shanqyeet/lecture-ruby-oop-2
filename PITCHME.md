@@ -1,4 +1,4 @@
-### OOP Part 1 
+# OOP Part 1 
 
 1. Class Variable 
 2. Class Method & Self 
