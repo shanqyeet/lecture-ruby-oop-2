@@ -6,6 +6,21 @@
 ---
 # Class Variable 
 
++++ 
+## Looks like this
+```ruby
+class Student 
+  @@variable_name = "something"
+  
+  def initialize
+    #some attributes here 
+  end 
+end 
+```
++++ 
+## Simple activity
+
+
 ---
 
 # Class Method & Self 
