@@ -6,7 +6,10 @@
 ---
 # Class Variable 
 +++ 
-## Looks like this
+### Definition
+a class variable is a variable defined in a class of which a single copy exists, regardless of how many instances of the class exist
++++
+### Looks like this
 ```ruby
 class Student 
   @@variable_name = "something"
@@ -17,7 +20,7 @@ class Student
 end 
 ```
 +++ 
-## Simple activity, we have...
+### Simple activity, we have...
 ```ruby
 class Vehicle
   @@total = 0
@@ -91,14 +94,37 @@ rosmah.caught #=> "A total of 282 luxury bags was found in Rosmah's house"
 ### Using Self - inside of a class method
 
 ```
-class Random
-  def self.reflect
+class Election
+@@PH_total_seats_won = 121 
+
+  def self.test
     self 
   end
+  
+  def self.result 
+    p "Pakatan Harapan won #{@@PH_total_seats_won} seats"
+  end 
+
+  def self.result_percentage
+    p ((@@PH_total_seats_won/220).to_f*100).to_s + "%"
+  end 
 end 
 
-p Random.reflect == Random #=> true
+```
++++
 
+### Question
+```ruby 
+p Election.test == output?
+p Election.result #=> output?
+p Election.result_percentage #=> output?
+```
+
+### Answer 
+```ruby
+p Election.test == Election #=> true
+p Election.result #=> "Pakatan Harapan won 121 seats"
+p Election.result_percentage #=> 55.00%
 ```
 ---
 
@@ -126,6 +152,8 @@ end
 cookie = Cookie.new
 p cookie.cream?
 ```
+---
+# Recap
 
 
 
