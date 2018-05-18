@@ -119,7 +119,7 @@ p Election.test == Election #=> output?
 p Election.result #=> output?
 p Election.result_percentage #=> output?
 ```
-
++++
 ### Answer 
 ```ruby
 p Election.test == Election #=> true
