@@ -115,7 +115,7 @@ end
 
 ### Question
 ```ruby 
-p Election.test == output?
+p Election.test == Election #=> output?
 p Election.result #=> output?
 p Election.result_percentage #=> output?
 ```
