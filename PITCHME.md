@@ -50,7 +50,7 @@ Basically, "self" gives you access to the current object
 
 ### Using Self -  Inside an instance method
 
-```
+```ruby
 class Corrupt
   def test
      self 
@@ -61,42 +61,30 @@ class Corrupt
   end 
   
   def caught
-    p "A total of " + self.total_bags + " luxury bags was found in Rosmah's house"
+    p "A total of " + self.total_bags + " luxury bags was found 
+        in Rosmah's house"
   end 
 end 
+```
++++ 
+### Question
 
+```ruby
 rosmah = Corrupt.new
 
 p rosmah.test #=> output?
 p rosmah.reflect == g #=> output?
 rosmah.caught #=> output?
-
 ```
 +++
 
-### Using Self -  Inside an instance method
+### Answer
 
-```
-class Corrupt
-  def test
-     self 
-  end 
-  
-  def total_bags
-    p "282"
-  end 
-  
-  def caught
-    p "A total of " + self.total_bags + " luxury bags was found in Rosmah's house"
-  end 
-end 
-
+```ruby
 rosmah = Corrupt.new
-
 p rosmah.test #=> <Corrupt: some alphanumerics>
 p rosmah.reflect == g #=> true
 rosmah.caught #=> "A total of 282 luxury bags was found in Rosmah's house"
-
 ```
 +++
 
