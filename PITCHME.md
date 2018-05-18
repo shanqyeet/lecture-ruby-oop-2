@@ -5,7 +5,6 @@
 3. Module 
 ---
 # Class Variable 
-
 +++ 
 ## Looks like this
 ```ruby
@@ -52,22 +51,53 @@ Basically, "self" gives you access to the current object
 ### Using Self -  Inside an instance method
 
 ```
-class Random
-  def reflect
-    self
+class Corrupt
+  def test
+     self 
+  end 
+  
+  def total_bags
+    p "282"
+  end 
+  
+  def caught
+    p "A total of " + self.total_bags + " luxury bags was found in Rosmah's house"
   end 
 end 
 
-g = Random.new
+rosmah = Corrupt.new
 
-p g.reflect #=> <Random: some alphanumerics>
-
-p g  #=> <Random: same alphanumerics>
-
-p g.reflect == g #=> true
+p rosmah.test #=> output?
+p rosmah.reflect == g #=> output?
+rosmah.caught #=> output?
 
 ```
++++
 
+### Using Self -  Inside an instance method
+
+```
+class Corrupt
+  def test
+     self 
+  end 
+  
+  def total_bags
+    p "282"
+  end 
+  
+  def caught
+    p "A total of " + self.total_bags + " luxury bags was found in Rosmah's house"
+  end 
+end 
+
+rosmah = Corrupt.new
+
+p rosmah.test #=> <Corrupt: some alphanumerics>
+p rosmah.reflect == g #=> true
+rosmah.caught #=> "A total of 282 luxury bags was found in Rosmah's house"
+
+```
 +++
 
 ### Using Self - inside of a class method
